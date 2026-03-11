@@ -1,16 +1,131 @@
-# React + Vite
+# Subscription Manager — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend web application for managing user subscriptions.
 
-Currently, two official plugins are available:
+This project is built with **React and Vite** and communicates with the backend REST API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+# Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* React
+* Vite
+* Axios
+* React Toastify
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Project Structure
+
+frontend
+├ src
+│ ├ components
+│ │ ├ SubscriptionTable.jsx
+│ │ ├ SubscriptionFormModal.jsx
+│ │ ├ EditSubscriptionModal.jsx
+│ │ └ DeleteModal.jsx
+│ │
+│ ├ services
+│ │ └ api.js
+│ │
+│ ├ App.jsx
+│ └ main.jsx
+│
+├ package.json
+└ README.md
+
+---
+
+# Features
+
+* View all subscriptions
+* Add new subscription
+* Edit subscription
+* Delete subscription
+* Remaining days calculation
+* Toast notifications
+
+---
+
+# Prerequisites
+
+Make sure the **backend server is running**.
+
+Backend must run at:
+
+http://localhost:5000
+
+---
+
+# Setup Instructions
+
+## 1. Clone Repository
+
+git clone <frontend-repo-url>
+cd frontend
+
+---
+
+## 2. Install Dependencies
+
+npm install
+
+---
+
+## 3. Start Development Server
+
+npm run dev
+
+---
+
+## 4. Open Application
+
+Open in browser:
+
+http://localhost:5173
+
+---
+
+# Application Workflow
+
+User actions in the UI trigger API requests to the backend.
+
+Example flow:
+
+User creates subscription
+↓
+Frontend sends POST request
+↓
+Backend saves data in PostgreSQL
+↓
+Frontend refreshes subscription list
+
+---
+
+# Backend Requirement
+
+This frontend expects the backend API to run at:
+
+http://localhost:5000/api
+
+---
+
+# Example UI Actions
+
+Add Subscription
+Edit Subscription
+Delete Subscription
+View Remaining Days
+
+---
+
+# Notes
+
+* Make sure the backend is running before starting the frontend.
+* If backend port changes, update `src/services/api.js`.
+
+---
+
+# License
+
+This project is for educational purposes.
