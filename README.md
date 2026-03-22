@@ -60,22 +60,22 @@ http://localhost:5000
 # Setup Instructions
 
 ## 1. Clone Repository
-
+```bash
 git clone <frontend-repo-url>
 cd frontend
-
+```
 ---
 
 ## 2. Install Dependencies
-
+```bash
 npm install
-
+```
 ---
 
 ## 3. Start Development Server
-
+```bash
 npm run dev
-
+```
 ---
 
 ## 4. Open Application
